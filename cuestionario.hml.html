@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--estas son las librerias para el boostrap-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="https://use.fontwesome.com/reases/v5.8.1/css/all.css"  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+       <link href="https://fonts.cdnfonts.com/css/fn-blocknote-hand" rel="stylesheet">
+       <link href="https://fonts.cdnfonts.com/css/retrcade" rel="stylesheet">       
+                
+       <link rell="stylesheet" href="style.cc">
+       <link rell="stylesheet" href="footer.cc">
+     <title>Cuestionario</title>
+    </head>
+  <body>
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/fn-blocknote-hand');
+
+
+body {
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+  font-family: 'Poppins', sans-serif;
+
+  align-items: center;
+  justify-content: center;
+  
+  overflow: hidden;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  overflow: hidden;
+  font-family: 'FN Blocknote Hand', sans-serif;
+                                
+                                                
+}
+
+.quiz-header {
+  padding: 4rem;
+}
+
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+button {
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+
+button:hover {
+  background-color: #732d91;
+}
+
+button:focus {
+  outline: none;
+  background-color: #5e3370;
+}
+    </style>
+    
+   <body>
+    <div style="margin: 25px;">
+        <nav class="navbar navbar-light" style="background-color: #CCE3DE;">
+            <div class="container">
+                
+                <ul class="nav navbar-nav">
+                    <li>
+                        <li class="active">
+                        <a href="index.html">inicio</a>
+                    </li>
+                    <li>
+                        <a href="menu.html">menu</a>
+                    </li>
+                    <li>
+                        <a href="pedido.html">pedido</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">contacto</a>
+                    </li>
+                    <li>
+                        <a href="apimovies.html">Movies </a>
+                    </li>
+                    <li>
+                        <a href="movies.html.html">Peliculas</a>
+                    </li>
+                    <li>
+                        <a href="calculadorafisica.html">Calculadora fisica</a>
+                    </li>
+                    <li>
+                        <a href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li>
+                      <a href="cuestionario.hml.html">Quiz</a>
+                  </li>
+                </ul>
+            </div>
+         </nav>
+        </div>    
+        <style>
+          body{
+              background-color: rgb(182, 52, 52);
+              color: rgb(0, 0, 0);
+              font-family: 'Retrcade', sans-serif;
+                                                      
+          }
+          div{
+              position: relative;
+          }
+          video{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+          }
+          .titulo{
+          background-color: rgb(0, 0, 0);
+          font-size: 1200px;
+          text-align: center;
+          font-weight: 2000;
+          mix-blend-mode: multiply;
+          }
+      </style>
+    </nav>
+    
+    <div class="container">
+      <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <div class="image-container">
+            <img src="imagen.jpg" alt="Imagen" id="question-image" style="width: 200px; height:200px;">
+          
+        <h2 id="question">Question text</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer">
+            <label for="a" id="a_text">Question</label>
+          </li>
+
+          <li>
+            <input type="radio" name="answer" id="b" class="answer">
+            <label for="b" id="b_text">Question</label>
+          </li>
+
+          <li>
+            <input type="radio" name="answer" id="c" class="answer">
+            <label for="c" id="c_text">Question</label>
+          </li>
+
+          <li>
+            <input type="radio" name="answer" id="d" class="answer">
+            <label for="d" id="d_text">Question</label>
+          </li>
+        </ul>
+      </div>
+      <button id="submit">Submit</button>
+    </div>
+    <script>
+        const quizData = [
+    {
+        question: "¿Cuál es el nombre del oso que protagoniza la serie animada (Winnie the Pooh)?",
+        image: "quiz1.jpg",
+        a: "Tigger",
+        b: "Piglet",
+        c: "Eeyore",
+        d: "Pooh",
+        correct: "d",
+    },
+    {
+
+
+        question: "¿Cuál es el nombre del ratón amigo de Mickey Mouse?",
+        image: "quiz2.jpg",
+        a: "Goofy",
+        b: "Donald Duck",
+        c: "Minnie Mause",
+        d: "Pluto",
+        correct: "c",
+    },
+    {
+        question: "¿cuál es el nombre completo del personaje principal, Homer Simpson?",
+        image: "quiz3.jpg",
+        a: " Homer Jay Simpson",
+        b: "Homer John Simpson",
+        c: "Homer James Simpson",
+        d: " Homer Jack Simpson",
+        correct: "a",
+    },
+    {
+        question: "¿Cómo se llama la sirena protagonista de la película de Disney (La Sirenita)?",
+        image: "quiz4.jpg",
+        a: "Bella",
+        b: "Ariel",
+        c: "Jasmine",
+        d: "Mulan",
+        correct: "b",
+    },
+    {
+        question: "En la serie animada (Dragon Ball Z), ¿cuál es el nombre del protagonista?",
+        image: "quiz5.jpg",
+        a: "Goku",
+        b: "Vegeta",
+        c: "Gohan",
+        d: "Piccolo",
+        correct: "a",
+    },
+    {
+        question: "¿Cómo se llama el simpático conejo de la película (Bambi) de Disney?",
+        image: "quiz6.jpg",
+        a: "Flower",
+        b: "Thuper",
+        c: "Bambi",
+        d: "Faline",
+        correct: "b",
+    },
+    {
+        question: "En la serie (Tom y Jerry), ¿cuál es el nombre del perro que siempre intenta atrapar al ratón Jerry?",
+        image: "quiz7.jpg",
+        a: "Tyke",
+        b: "Butch",
+        c: "Tuffy",
+        d: "Spike",
+        correct: "a",
+    },
+    {
+        question: "¿Cuál es el nombre de la princesa de la película (Enredados) de Disney?",
+        image: "quiz8.jpg",
+        a: "Aurora",
+        b: "Rampuzel",
+        c: "Cenicienta",
+        d: "Bella",
+        correct: "b",
+    },
+    {
+        question: "En la serie animada (Scooby-Doo), ¿cuál es el nombre del perro protagonista?",
+        image: "quiz9.jpg",
+        a: "Scooby-Dum",
+        b: "Scrappy-Doo",
+        c: "Scooby-Doo",
+        d: "Shaggy-Doo",
+        correct: "c",
+    },
+    {
+        question: "¿Cuál es el nombre del primo de Dora la Exploradora)?",
+        image: "quiz10.jpg",
+        a: "Bota",
+        b: "Diego",
+        c: "Swiper",
+        d: "Zorro",
+        correct: "b",
+    },
+    {
+        question: "En la película (Toy Story), ¿cuál es el nombre del vaquero protagonista?",
+        image: "quiz11.jpg",
+        a: "Cara de papa",
+        b: "Jessie",
+        c: "Buzz Lightyear",
+        d: "Woody",
+        correct: "d",
+    }, {
+        question: "¿Cómo se llama el famoso gato cósmico de la serie de anime (Doraemon)?",
+        image: "quiz12.jpg",
+        a: "Bobita",
+        b: "Shizuka",
+        c: "Suneo",
+        d: "Doraemon",
+        correct: "d",
+    }, {
+        question: "En la serie (Los Rugrats), ¿cuál es el nombre del bebé más travieso y aventurero?",
+        image: "quiz13.jpg",
+        a: "Lil",
+        b: "Chuckie",
+        c: "Phil",
+        d: "Tommy",
+        correct: "b",
+    }, {
+        question: "¿Cuál es el nombre del genio azul en la película (Aladdin) de Disney?",
+        image: "quiz14.jpg",
+        a: "Abu",
+        b: "Jafar",
+        c: "Rajah",
+        d: "Genio",
+        correct: "d",
+    }, {
+        question: "En la serie animada (Bob Esponja), ¿cuál es el nombre del mejor amigo de Bob Esponja?",
+        image: "quiz15.jpg",
+        a: "Patricio Estrella",
+        b: "Calamardo Tentaculos",
+        c: "Señor Cangrejo",
+        d: "Arenita Mejillas",
+        correct: "a",
+    }, {
+        question: "¿Cuál es el nombre del personaje principal en la serie (Avatar: La Leyenda de Aang)?",
+        image: "quiz16.jpg",
+        a: "Aang",
+        b: "Zuko",
+        c: "Katara",
+        d: "Toph",
+        correct: "a",
+    }, {
+        question: "En la película (Frozen), ¿cuál es el nombre de la hermana de Elsa?",
+        image: "quiz17.jpg",
+        a: "Olaf",
+        b: "Kristof",
+        c: "Anna",
+        d: "Sven",
+        correct: "c",
+    }, {
+        question: "¿Cuál es el nombre del gato negro en la película (El Viaje de Chihiro) de Studio Ghibli?",
+        image: "quiz18.jpg",
+        a: "Aurora",
+        b: "Jiji",
+        c: "Chihiro",
+        d: "Totoro",
+        correct: "b",
+    }, {
+        question: "En la serie (Pokémon), ¿cuál es el nombre del protagonista principal?",
+        image: "quiz19.jpg",
+        a: "Misty",
+        b: "Pikachu",
+        c: "Brock",
+        d: "Ash Ketchum",
+        correct: "d",
+    }, {
+        question: "¿Cuál es el nombre del cerdito en la película (La Granja) de Disney?",
+        image: "quiz20.jpg",
+        a: "Pumba",
+        b: "Babe",
+        c: "Porky",
+        d: "Wilbur",
+        correct: "b",
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+];  // Un array que contiene los datos del cuestionario
+
+const quiz = document.getElementById('quiz');  // Obtiene el elemento HTML con el id "quiz"
+const answerEls = document.querySelectorAll('.answer');  // Obtiene todos los elementos HTML con la clase "answer"
+const questionEl = document.getElementById('question');  // Obtiene el elemento HTML con el id "question"
+const a_text = document.getElementById('a_text');  // Obtiene el elemento HTML con el id "a_text"
+const b_text = document.getElementById('b_text');  // Obtiene el elemento HTML con el id "b_text"
+const c_text = document.getElementById('c_text');  // Obtiene el elemento HTML con el id "c_text"
+const d_text = document.getElementById('d_text');  // Obtiene el elemento HTML con el id "d_text"
+const submitBtn = document.getElementById('submit');  // Obtiene el elemento HTML con el id "submit"
+
+let currentQuiz = 0;  // Variable para realizar un seguimiento de la pregunta actual del cuestionario
+let score = 0;  // Variable para realizar un seguimiento del puntaje del usuario
+
+loadQuiz();  // Carga la primera pregunta del cuestionario
+
+function loadQuiz() {
+    deselectAnswers();  // Deselecciona todas las respuestas del cuestionario
+    const currentQuizData = quizData[currentQuiz];  // Obtiene los datos de la pregunta actual del cuestionario
+    questionEl.innerText = currentQuizData.question;  // Muestra la pregunta actual en el elemento HTML correspondiente
+    a_text.innerText = currentQuizData.a;  // Muestra la opción de respuesta A en el elemento HTML correspondiente
+    b_text.innerText = currentQuizData.b;  // Muestra la opción de respuesta B en el elemento HTML correspondiente
+    c_text.innerText = currentQuizData.c;  // Muestra la opción de respuesta C en el elemento HTML correspondiente
+    d_text.innerText = currentQuizData.d;  // Muestra la opción de respuesta D en el elemento HTML correspondiente
+
+    const questionImage = document.getElementById("question-image");
+    questionImage.src = currentQuizData.image;
+
+}
+
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false);  // Desmarca todas las casillas de verificación de respuesta
+}
+
+function getSelected() {
+    let answer;
+
+    answerEls.forEach(answerEl => {
+        if (answerEl.checked) {
+            answer = answerEl.id;  // Obtiene la opción de respuesta seleccionada por el usuario
+        }
+    });
+
+    return answer;  // Devuelve la opción de respuesta seleccionada
+}
+
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected();  // Obtiene la opción de respuesta seleccionada por el usuario
+
+    if (answer) {
+        if (answer === quizData[currentQuiz].correct) {
+            score++;  // Incrementa el puntaje si la respuesta es correcta
+        }
+
+        currentQuiz++;  // Increment
+        if(currentQuiz < quizData.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `
+                <h2>Contestaste ${score}/${quizData.length} de preguntas correctamente</h2>
+
+                <button onclick="location.reload()">Reload</button>
+            `
+        }
+    }
+})
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/retrcade" rel="stylesheet">
+                
+                
+                
+    <title>Pedido</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: #CCE3DE;">
+            <div class="container">
+                
+                <ul class="nav navbar-nav">
+                    <li>
+                        <li class="active">
+                        <a href="index.html">inicio</a>
+                    </li>
+                    <li>
+                        <a href="menu.html">menu</a>
+                    </li>
+                    <li>
+                        
+                        <a href="pedido.html">pedido</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">contacto</a>
+                    </li>
+                    <li>
+                        <a href="apimovies.html">Movies </a>
+                    </li>
+                    <li>
+                        <a href="movies.html.html">Peliculas</a>
+                    </li>
+                    <li>
+                        <a href="calculadorafisica.html">Calculadora fisica</a>
+                    </li>
+                    <li>
+                        <a href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li>
+                        <a href="cuestionario.hml.html">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+         </nav>
+        </div> 
+    <titulo>pedido</titulo><br>
+    <style>
+        body{
+            background-color: rgb(182, 52, 52);
+            color: rgb(254, 254, 250);
+            font-family: 'Retrcade', sans-serif;
+                                                    
+        }
+        div{
+            position: relative;
+        }
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .titulo{
+        background-color: rgb(0, 0, 0);
+        font-size: 120px;
+        text-align: center;
+        font-weight: 200;
+        mix-blend-mode: multiply;
+        }
+    </style>
+
+    <form id="pedido">
+<p>Nombre: <input type="text" id="nombre" name="nombre" size="30"></p>
+<p>Apellido: <input type="text" id="apellido" name="apellido" size="30"></p>
+<p>Telefono: <input type="text" id="telefono" name="telefono" size="20"></p>
+<p>Direccion: <input type="text" id="direccion" name="direccion" size="30"></p>    
+<p>Colonia: <input type="text" id="colonia" name="colonia" size="30"></p>
+<hr>
+
+<select name="Menu" id="Menu">
+    <optgroup label="Hamburguesa">Hamburguesa</optgroup>
+    <option value="Normal">Normal</option>
+
+<optgroup label="Tortas">
+    <option value="Simple">Simple</option>
+    <option value="Cemita">Cemita</option>
+    <option value="Tarta Ahogada">Torta Ahogada</option>
+    <option value="Torta Mixta">Torta Mixta</option>
+    <option value="Torta de Tamal">Torta de Tamal</option>
+    <option value="Torta Norteña">Torta Norteña</option>
+</optgroup>
+
+    <optgroup label="Pizzas">
+        <option value="Peperoni">Peperoni</option>
+        <option value="Queso con Peperoni">Queso con peperoni</option>
+        <option value="Hawaiana">Hawaiana</option>
+        <option value="Hecha al Sarten">Hecha al sarten</option>
+        <option value="Vegetariana">Vegetariana</option>
+        <option value="Sorpresa">Sorpresa</option>
+    
+</optgroup>
+
+<optgroup label="Tacos">
+    <option value="Tacos de Trompo">Tacos de Trompo</option>
+    <option value="Tacos de Bisteck">Tacos de Bristec</option>
+    <option value="Tacos de Suadero">Tacos de Suadero</option>
+    <option value="Frijoles Charros">Frijoles Charros</option>   
+</optgroup>
+ 
+<optgroup label="Boneless">
+    <option value="Salsa de Mango Habanero">Salsa de Mango Habanero</option>
+    <option value="Salsa BQ">Salsa de BQ</option>
+    <option value="Bufalo">Bufalo</option>  
+    <option value="Salsa Bufalo Ranch">Salsa Bufalo Ranch</option>   
+    <option value="Fresa Chipotle">Fresa Chipotle</option>
+    <option value="Chipotle Ranch">Chpotle Ranch</option>
+    <option value="Verde Jalapeño">Verde Jalapeño</option>
+</optgroup>
+
+<optgroup label="Sincronizadas">
+    <option value="Queso con Champiñones">Queso con chamiñones</option>
+    <option value="Queso">Queso</option>
+    <option value="Bisteck con Queso"> Bisteck de Queso</option>  
+    <option value="Bisteck">Bisteck</option>   
+    <option value="Desebrada">Desebrada</option>
+    <option value="Trompo">Trompo</option>
+</optgroup>
+
+<optgroup label="Enchiladas">
+    <option value="Rojas">Rojas</option>
+    <option value="Verdes">Verdes</option>
+    <option value="Enmoladas"> Enmoladas</option>  
+    <option value="Potosinas">Potosinas</option>   
+    <option value="Suizas">Suizas</option>
+    <option value="Mineras">Mineras</option>
+    <option value="Enfijoladas">Enfrijoladas</option>
+</optgroup>
+
+<optgroup label="Burritos">
+    <option value="BurriPizza">BurriPizza</option>
+    <option value="Frijol">Frijol</option>
+    <option value="Chicarron Prensado">Chicharron Prensado</option>  
+    <option value="Carne Molida">Carne Molida</option>   
+    <option value="Barbacoa">Barbacoa</option>
+    <option value="Queso con Champiñon">Queso con Champiñon</option>
+    <option value="Trompo">Trompo</option>
+    <option value="Bisteck">Bisteck</option>
+</optgroup>
+
+<optgroup label="Rebanadas de Postres">
+    <option value="Pastel de Chocolate">Pastel de Chocolate</option>
+    <option value="Crepa">Crepa</option>
+    <option value="Pay de Queso">Pay de Queso</option>  
+    <option value="Chiskey">Chiskey</option>   
+    <option value="Pay de Elote">Pay de Elote</option>
+    <option value="Flan">Flan</option>
+    <option value="Pastel de Zanahoria">Pastel de Zanahoria</option>
+    <option value="Gelatina de Mosaico">Gelatina de Mosaico</option>
+</optgroup>
+
+<optgroup label="Bebidas Frias">
+    <option value="Cajeta Frappuccino">Cajeta Frappuccino</option>
+    <option value="Cajeta Cream Frappuccino">Cajeta Cream Frappuccino</option>
+    <option value="Caramel Latte Helado">Caramel Latte Helado</option>  
+    <option value="Mocha">Mocha</option>   
+    <option value="Late Helado">Late Helado</option>
+    <option value="Malteada">Malteada</option>
+    <option value="Caramel Frappuccino">Caramel Frappuccino</option>
+</optgroup>
+
+<optgroup label="Refrescos y Bebidas de Sabor">
+    <option value="Coca Cola">Coca Cola</option>
+    <option value="Manzanita">Manzanita</option>
+    <option value="Agua de Jamaica">Agua de Jamaica</option>  
+    <option value="Agua de Horchata">Agua de Horchata</option>   
+    <option value="Agua de Naranja">Agua de Naranja</option>
+    <option value="Agua de Limon">Agua de Limon</option>
+    <option value="Peñafiel">Peñafiel</option>
+    <option value="Sprite">Sprite</option>
+    <option value="Fresca ">Fresca</option>
+    <option value="Agua de Uva">Agua de Uva</option>
+</optgroup>
+</select>
+<link href="https://fonts.cdnfonts.com/css/retrcade" rel="stylesheet">
+       <titulo>verduras</titulo><br>
+       vegetales:
+       <input type="checkbox"id="tomate"checked><label for="tomate">tomate</label>
+       <input type="checkbox"id="cebolla"checked><label for="cebolla">cebolla</label>       
+       <input type="checkbox"id="pepino"checked><label for="penino">penino</label>
+       <input type="checkbox"id="aguacate"checked><label for="aguacate">aguacate</label>
+       <input type="checkbox"id="tocino"checked><label for="tocino">tocino</label>
+       <input type="checkbox"id="apio"checked><label for="apio">apio</label>
+       <input type="checkbox"id="zanahoria"checked><label for="zanahoria">zanahoria</label>
+       <input type="checkbox"id="limon"checked><label for="limon">limon</label>
+       <input type="checkbox"id="cilantro"checked><label for="cilantro">cilantro</label>
+       <input type="checkbox"id="salsa"checked><label for="salsa">salsa</label>
+
+
+       <br>
+       
+<input type="submit"value="Enviar">
+<input type="reset"value="Borrar">
+    </form>
+    <script>
+        const form=document.getElementById("pedido");
+        form.addEventListener("submit",function (event){ 
+        event.preventDefault();
+        const formData=new FormData (form);
+        const orden={
+            nombre:formData.get("nombre"),
+            apellido:formData.get("apellido"),
+            telefono:formData.get("telefono"),
+            direccion:formData.get("direccion"),
+            colonia:formData.get("colonia"),
+            menu:formData.get("menu"),
+            tomate:document.getElementById("tomate").checked ? "Si": "No",
+            cebolla:document.getElementById("cebolla").checked ? "Si": "No",
+            pepino:document.getElementById("pepino").checked ? "Si": "No",
+            tocino:document.getElementById("tocino").checked ? "Si": "No",
+            aguacate:document.getElementById("aguacate").checked ? "Si": "No",
+            apio:document.getElementById("apio").checked ? "Si": "No",
+            zanahoria:document.getElementById("zanahoria").checked ? "Si": "No",
+            limon:document.getElementById("limon").checked ? "Si": "No",
+            cilantro:document.getElementById("cilantro").checked ? "Si": "No",
+            salsa:document.getElementById("salsa").checked ? "Si": "No",
+            
+    
+        };
+        localStorage.setItem ("orden",JSON.stringify(orden));
+        window.location.href="pedidorealizado.html"; 
+    });
+        </script>
+        <body>
+            <footer>
+        
+        
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="fotter-section about">
+                <h2> Ven y contactame pór aqui..</h2>
+                <p>Si estas interesado en contactarme,puedes hacerlo a atraves de cualquiera de las siguientes 
+                    redes Sociales:</p>
+                    <div class="contact-links">
+                    <a href="http://www.facebook.com/miperfil" 
+                    target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="http://www.instagram.com/miperfil" 
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.twitter.com/miperfil" 
+                    target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="http://www.discord.com/miperfil" 
+                    target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="http://www.pinterest.com/miperfil" 
+                    target="_blank"><i class="fab fa-pinterest"></i></a>
+                    <a href="http://www.linkedin.com/miperfil" 
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    </div>
+                   </div>
+                 </div>
+                       
+           
+        
+            <script>
+                //este siguiente codigo es para que los enlaces se abran en una nueva pestaña
+                const redessociales = document.querySelectorAll('.contact-links');
+                redessociales.forEach(link =>{
+                    link.addEventListener('click', e => {
+                        e.preventDefault();
+                        window.open(link.href, '_blank');
+                    });
+                });
+        
+            </script>
+        
+      
+    
+    
+    
+      </main>
+    
+    </body>
+    </html>
+</body>
+</html>
